@@ -3,26 +3,23 @@
 @import "variables.scss";
 
 .header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  @include flex($justify-content: space-between);
   position: fixed;
   z-index: 10;
   top: 40px;
   width: 100%;
+  padding: 0 50px;
+  box-sizing: border-box;
 
   &__logo {
-    padding: 0 200px 0 50px;
-    width: 150px;
+    width: 100px;
   }
 
   &__nav {
-    display: flex;
+    @include flex($justify-content: space-between);
     list-style-type: none;
-
-    &-item {
-      margin-right: 40px;
-    }
+    width: 600px;
+    min-width: 600px;
 
     &-link {
       text-decoration: none;
@@ -39,9 +36,13 @@
   }
 
   &__social-links {
-    padding: 0 100px;
+    @include flex($justify-content: space-between);
+    width: 80px;
+  }
+
+  &__social-link {
+    width: 20px;
     cursor: pointer;
-    width: 100px;
 
     &:hover {
       opacity: 0.8;
