@@ -19,7 +19,6 @@
     @include flex($justify-content: space-between);
     list-style-type: none;
     width: 600px;
-    min-width: 600px;
 
     &-link {
       text-decoration: none;
