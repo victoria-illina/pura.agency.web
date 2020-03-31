@@ -3,7 +3,6 @@
 @import "variables.scss";
 
 .about-us {
-  width: 100%;
   background: $linear-gradient;
   padding: 100px 50px;
   box-sizing: border-box;
@@ -25,7 +24,7 @@
   }
 
   &__btn-block {
-    @include flex($justify-content: end);
+    @include flex($justify-content: right);
   }
 
   &__btn {
