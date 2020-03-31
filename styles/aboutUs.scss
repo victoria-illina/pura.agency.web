@@ -24,7 +24,7 @@
   }
 
   &__btn-block {
-    @include flex($justify-content: right);
+    @include flex($justify-content: flex-end);
   }
 
   &__btn {
