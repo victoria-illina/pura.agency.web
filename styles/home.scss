@@ -10,6 +10,7 @@
   position: relative;
   background-repeat: no-repeat;
   background-size: cover;
+  @include flex();
 
   &__layout {
     position: absolute;
@@ -21,9 +22,6 @@
 
   &__content {
     position: absolute;
-    top: 200px;
-    // @include flex();
-    // flex-direction: column;
     text-align: center;
   }
 
