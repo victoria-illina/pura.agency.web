@@ -2,38 +2,38 @@
 
 @import "variables.scss";
 
-.process{
+.process {
   @include flex();
 
-  &__item{
+  &__item {
     width: 30%;
     padding: 100px 30px 100px 60px;
     box-sizing: border-box;
     position: relative;
 
-     &:hover {
-    background: $linear-gradient;
-    padding: 70px 30px 70px 60px;
+    &:hover {
+      background: $linear-gradient;
+      padding: 70px 30px 70px 60px;
 
+      .process__item-number {
+        font-size: $font-size-title;
+        background: $primary-color;
+        -webkit-background-clip: text;
+        opacity: 1;
+        font-family: $font-family;
+        position: static;
+      }
 
-     &:hover .process__item-number {
-    font-size: $font-size-title;
-    background: $primary-color;
-    -webkit-background-clip: text;
-    opacity: 1;
-    font-family: $font-family;
-    position: static;
+      .process__item-title {
+        color: $primary-color;
+      }
+
+      .process__item-text {
+        color: $primary-color;
+      }
     }
 
-     &:hover .process__item-title {
-    color: $primary-color;
-    }
-
-     &:hover .process__item-text {
-    color: $primary-color;
-    }
-  }
-      &-number {
+    &-number {
       font-size: $font-size-number;
       font-family: $font-family;
       position: absolute;
@@ -42,16 +42,16 @@
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       opacity: 0.6;
-     }
+    }
 
-     &-title {
+    &-title {
       font-size: $font-size-basic;
       color: $additional-color;
       font-family: $font-family;
-     }
+    }
 
-     &-text {
-      font-size:$font-size-text;
+    &-text {
+      font-size: $font-size-text;
       color: $color-text;
       font-family: $font-family-secondary;
       padding-top: 35px;
