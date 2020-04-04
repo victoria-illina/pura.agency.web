@@ -1,0 +1,91 @@
+@import "mixin.scss";
+
+@import "variables.scss";
+
+.team {
+  padding: 90px 100px;
+  box-sizing: border-box;
+
+  &__title {
+    color: $secondaty-color;
+    font-family: $font-family;
+    font-size: $font-size-huge;
+    padding-bottom: 60px;
+  }
+
+  &__persons {
+    @include flex($justify-content: space-between, $align-items: flex-start);
+
+    &-item {
+      width: 350px;
+      position: relative;
+      margin-right: 30px;
+
+      &:last-child{
+        margin-right: 0;
+      }
+
+      &:hover {
+        .team__persons-bg {
+          display: block;
+        }
+
+        .team__persons-links {
+          display: flex;
+        }
+
+        .team__persons-content {
+          position: absolute;
+          top: 50%;
+          transform: translate(0, -50%);
+        }
+
+        .team__persons-name {
+          color: $primary-color;
+        }
+
+        .team__persons-position {
+          color: $primary-color;
+        }
+      }
+    }
+
+    &-bg {
+      background: $linear-gradient;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      opacity: 0.5;
+      display: none;
+    }
+
+    &-foto {
+      width: 100%;
+    }
+
+    &-name {
+      color: $secondaty-color;
+      font-family: $font-family;
+      font-size: $font-size-basic;
+      text-align: center;
+      padding-top: 10px;
+    }
+
+    &-position {
+      color: $color-text;
+      font-family: $font-family-secondary;
+      font-size: $font-size-medium;
+      text-align: center;
+    }
+
+    &-links {
+      @include flex();
+      display: none;
+    }
+
+    &-social-link {
+      width: 20px;
+      padding: 10px;
+    }
+  }
+}
