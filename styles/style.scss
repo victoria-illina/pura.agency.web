@@ -7,6 +7,14 @@
   width: 100%;
 }
 
+.screen {
+  margin: auto;
+  max-width: 1200px;
+  padding-left: 50px;
+  padding-right: 50px;
+  box-sizing: border-box;
+}
+
 button {
   border: none;
   margin: 0;
