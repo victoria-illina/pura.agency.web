@@ -1,0 +1,45 @@
+@import "mixin.scss";
+
+@import "variables.scss";
+
+.presentation {
+  @include flex($justify-content: space-between, $align-items: flex-start);
+  padding: 100px 0;
+
+  &__bg {
+    width: 50%;
+  }
+
+  &__content {
+    width: 50%;
+  }
+
+  &__title {
+    color: $secondaty-color;
+    font-family: $font-family;
+    font-size: $font-size-huge;
+
+    span {
+      color: #fd3e4f;
+    }
+  }
+
+  &__text {
+    color: $color-text;
+    font-family: $font-family;
+    font-size: $font-size-basic;
+    padding: 40px 0;
+  }
+
+  &__btn {
+    background: $linear-gradient;
+    padding: 20px 45px;
+    color: $primary-color;
+    font-family: $font-family;
+    font-size: $font-size-medium;
+    cursor: pointer;
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}
