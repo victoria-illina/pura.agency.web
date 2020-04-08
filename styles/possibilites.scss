@@ -1,0 +1,82 @@
+@import "mixin.scss";
+
+@import "variables.scss";
+
+.possibilites {
+  @include flex();
+  height: 750px;
+  padding-left: 50px;
+  box-sizing: border-box;
+  background: $color-bg;
+
+  &__content {
+    width: 50%;
+    max-width: 600px;
+  }
+
+  &__title {
+    color: $secondaty-color;
+    font-family: $font-family;
+    font-size: $font-size-huge;
+
+    span {
+      color: $color-raspberry;
+    }
+  }
+
+  &__text {
+    color: $color-text;
+    font-family: $font-family;
+    font-size: $font-size-basic;
+
+    p {
+      padding-top: 50px;
+    }
+  }
+
+  &__bg {
+    width: 50%;
+    height: 100%;
+    position: relative;
+  }
+
+  &__clock-bg {
+    width: 400px;
+    position: absolute;
+    z-index: 5;
+    bottom: 20px;
+    left: -140px;
+  }
+
+  &__ring-bg {
+    width: 330px;
+    position: absolute;
+    z-index: 4;
+    bottom: 210px;
+    left: 150px;
+  }
+
+  &__nike-bg {
+    width: 470px;
+    position: absolute;
+    z-index: 2;
+    top: -100px;
+    left: -80px;
+  }
+
+  &__watch-bg {
+    width: 370px;
+    position: absolute;
+    z-index: 3;
+    right: 0;
+    bottom: -70px;
+  }
+
+  &__grediant-bg {
+    width: 400px;
+    position: absolute;
+    z-index: 1;
+    top: 200px;
+    left: 180px;
+  }
+}
