@@ -1,2 +1,2 @@
-.features{display:grid}
+.features{display:grid;grid-template-columns:1fr 2fr}
 /*# sourceMappingURL=features.css.map */

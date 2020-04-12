@@ -1,6 +1,6 @@
 {
 "version": 3,
-"mappings": "AAIC,SAAU,CACT,OAAO,CAAE,IAAI",
+"mappings": "AAIA,SAAU,CACR,OAAO,CAAE,IAAI,CACb,qBAAqB,CAAE,OAAO",
 "sources": ["features.scss"],
 "names": [],
 "file": "features.css"
