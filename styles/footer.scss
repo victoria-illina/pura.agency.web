@@ -3,7 +3,7 @@
 @import "variables.scss";
 
 .footer {
-  padding: 100px 0;
+  padding: 100px 0 50px;
   position: relative;
   overflow: hidden;
 
@@ -15,16 +15,20 @@
   }
 
   &__container {
-    @include flex();
+    @include flex($align-items: flex-start);
   }
 
   &__logo-block {
-    width: 50%;
+    width: 40%;
+    margin-right: 30px;
+    box-sizing: border-box;
   }
   &__logo-title {
-    color: $secondaty-color;
+    color: $secondary-color;
     font-family: $font-family;
     font-size: $font-size-subtitle;
+    font-weight: normal;
+    padding-bottom: 56px;
 
     span {
       background: $linear-gradient;
@@ -32,19 +36,40 @@
       -webkit-text-fill-color: transparent;
       font-family: $font-family;
       font-size: $font-size-logo;
+      font-weight: bold;
+      line-height: 58px;
     }
   }
 
-  &__text {
+  &__logo-text {
     color: $color-text;
     font-family: $font-family;
     font-size: $font-size-text;
+    line-height: 28px;
+  }
+
+  &__title {
+    color: $secondary-color;
+    font-family: $font-family;
+    font-size: $font-size-basic;
+    padding-bottom: 50px;
+  }
+
+  &__text {
+    color: $secondary-color;
+    font-family: $font-family;
+    font-size: $font-size-text;
+    line-height: 26px;
   }
 
   &__twitter {
-    width: 25%;
-    @include flex($align-items: flex-start, $justify-content: space-between);
-    flex-direction: column;
+    width: 30%;
+    margin-right: 45px;
+    box-sizing: border-box;
+
+    &-content {
+      padding-bottom: 35px;
+    }
 
     &-ui {
       color: $color-raspberry;
@@ -54,16 +79,48 @@
     }
   }
 
-  &__title {
-    color: $secondaty-color;
-    font-family: $font-family;
-    font-size: $font-size-basic;
-  }
-
   &__contacts {
-    width: 25%;
-    @include flex();
-    flex-direction: column;
+    width: 30%;
+
+    &-content {
+      color: $secondary-color;
+      font-family: $font-family;
+      font-size: $font-size-small;
+      line-height: 35px;
+      padding: 30px 30px 40px;
+    }
+
+    &-email {
+      position: relative;
+
+      &:before {
+        content: "";
+        width: 20px;
+        height: 100%;
+        position: absolute;
+        background: url("../imgs/LetterIcon.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        top: 7px;
+        left: -30px;
+      }
+    }
+
+    &-phone {
+      position: relative;
+
+      &:before {
+        content: "";
+        width: 20px;
+        height: 100%;
+        position: absolute;
+        background: url("../imgs/PhoneIcon.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        top: 7px;
+        left: -30px;
+      }
+    }
 
     &-links {
       @include flex($justify-content: space-between);
@@ -78,40 +135,8 @@
         opacity: 0.8;
       }
     }
-
-    &-email {
-      position: relative;
-
-      &:before {
-        content: "";
-        // display: block;
-        width: 20px;
-        height: 100%;
-        position: absolute;
-        background: url("../imgs/LetterIcon.svg");
-        background-repeat: no-repeat;
-        background-size: contain;
-        top: 0;
-        left: -30px;
-      }
-    }
-    &-phone {
-      position: relative;
-
-      &:before {
-        content: "";
-        display: block;
-        width: 20px;
-        height: 100%;
-        position: absolute;
-        background: url("../imgs/PhoneIcon.svg");
-        background-repeat: no-repeat;
-        background-size: contain;
-        top: 0;
-        left: -30px;
-      }
-    }
   }
+
   &__date {
     background: $linear-gradient;
     -webkit-background-clip: text;
@@ -119,5 +144,6 @@
     font-family: $font-family;
     font-size: $font-size-text;
     text-align: center;
+    padding-top: 100px;
   }
 }
