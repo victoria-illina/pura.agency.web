@@ -7,30 +7,30 @@
 
   &__item {
     width: 30%;
-    padding: 100px 30px 100px 60px;
+    padding: 60px 30px 60px 0;
     box-sizing: border-box;
     position: relative;
 
     &:hover {
       background: $linear-gradient;
       padding: 60px 30px 60px 60px;
+    }
 
-      .process__item-number {
-        font-size: $font-size-title;
-        background: $primary-color;
-        -webkit-background-clip: text;
-        opacity: 1;
-        font-family: $font-family;
-        position: static;
-      }
+    &:hover > &-number {
+      font-size: $font-size-title;
+      background: $primary-color;
+      -webkit-background-clip: text;
+      opacity: 1;
+      font-family: $font-family;
+      position: static;
+    }
 
-      .process__item-title {
-        color: $primary-color;
-      }
+    &:hover > &-title {
+      color: $primary-color;
+    }
 
-      .process__item-text {
-        color: $primary-color;
-      }
+    &:hover > &-text {
+      color: $primary-color;
     }
 
     &-number {

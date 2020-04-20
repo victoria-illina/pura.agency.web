@@ -1,0 +1,95 @@
+@import "variables.scss";
+
+@import "mixin.scss";
+
+@media (max-width: 1000px) {
+  .header {
+    &__nav {
+      display: none;
+    }
+    &__social-links {
+      display: none;
+    }
+    &__burger-menu {
+      display: block;
+      width: 40px;
+    }
+  }
+  .home__title {
+    padding: 20px 0 50px;
+  }
+
+  .process {
+    flex-direction: column;
+
+    &__item {
+      width: 100%;
+      padding: 50px 0;
+
+      &:hover {
+        padding: 50px 30px;
+      }
+    }
+  }
+
+  .team {
+    padding: 50px 0;
+
+    &__persons {
+      flex-direction: column;
+
+      &-item {
+        width: 100%;
+      }
+    }
+  }
+
+  .presentation {
+    padding: 50px 0;
+
+    &__bg {
+      display: none;
+    }
+
+    &__content {
+      width: 100%;
+      max-width: 1000px;
+    }
+
+    &__text {
+      padding: 20px 0;
+    }
+  }
+  .possibilites {
+    &__content {
+      width: 100%;
+    }
+
+    &__bg {
+      display: none;
+    }
+  }
+
+  .features {
+    padding: 50px 0;
+
+    &__container {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .footer {
+    padding: 50px 0 50px;
+
+    &__logo-block {
+      width: 50%;
+    }
+    &__twitter {
+      display: none;
+    }
+    &__contacts {
+      width: 30%;
+    }
+  }
+}
